@@ -1,5 +1,4 @@
 package ro.uvt.sabloane;
 
-public class Car {
-
+public class SubChapter {
 }
