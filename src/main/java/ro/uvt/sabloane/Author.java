@@ -2,9 +2,12 @@ package ro.uvt.sabloane;
 
 public class Author {
 
-    private final String nume;
+    private final String name;
 
-    public Author(String nume){
-        this.nume = nume;
+    public Author(String name){
+        this.name = name;
+    }
+    public void print(){
+        System.out.println("Author: " + this.name);
     }
 }
