@@ -1,12 +1,24 @@
 package ro.uvt.sabloane;
 
-public class Image implements Element{
-    private String name;
+import java.util.concurrent.TimeUnit;
 
-    public Image(String name){
-        this.name = name;
+public class Image implements Element, Picture{
+    private String imageName;
+    private String url;
+    private ImageContent content;
+
+    public ImageContent content(){
+        return content;
+    }
+    Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public void print(){
-        System.out.println("Image with name: " + this.name);
+        System.out.println("Image with name: " + this.imageName);
     }
 }

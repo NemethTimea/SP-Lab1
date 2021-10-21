@@ -2,14 +2,14 @@ package ro.uvt.sabloane;
 
 import java.util.*;
 
-public class Book {
+public class Book extends Section{
 
-    private final String title;
+//    private final String title;
     private final Collection<Author> autori = new LinkedList<>();
-    private final ArrayList<Chapter> chapters = new ArrayList<>();
+//    private final List<Chapter> chapters = new ArrayList<>();
 
     public Book(String title){
-        this.title = title;
+        super(title);
     }
 
     public void addAuthor(Author autor){
@@ -24,20 +24,23 @@ public class Book {
         return Collections.unmodifiableCollection(autori);
     }
 
-    public int createChapter(String title){
-        chapters.add(new Chapter(title));
-        return chapters.size() - 1;
-    }
-    public Chapter getChapter(Integer pozition){
-        return chapters.get(pozition);
-    }
+//    public int createChapter(String title){
+//        chapters.add(new Chapter(title));
+//        return chapters.size() - 1;
+//    }
+//    public Chapter getChapter(Integer pozition){
+//        return chapters.get(pozition);
+//    }
+    
     public void print(){
         System.out.println("Book: " + this.title);
         for (Author a : this.autori){
             a.print();
         }
-        for (Chapter c : this.chapters){
-            c.print();
-        }
+        super.print();
+    }
+
+    public void add(Section playboyS1) {
+        elements.add(playboyS1);
     }
 }
