@@ -3,7 +3,7 @@ package ro.uvt.sabloane;
 public class ImageProxy implements Element,Picture {
     private String url;
     private Dimension dim;
-    private Image realImage;
+    private Image realImage = null;
 
     public Image loadImage(){
         if (realImage == null){
@@ -19,7 +19,7 @@ public class ImageProxy implements Element,Picture {
 
     @Override
     public void print() {
-
+        loadImage().print();
     }
 
     @Override

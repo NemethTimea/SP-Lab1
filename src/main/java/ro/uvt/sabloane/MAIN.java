@@ -20,13 +20,20 @@ public class MAIN {
                         startTime) + " milliseconds");
                 startTime = System.currentTimeMillis();
                 playboyS1.print();
+                playboyS2.print();
                 endTime = System.currentTimeMillis();
-                System.out.println("Printing of the section 1 took " + (endTime -
+                System.out.println("Printing of the section 1 and 2 took " + (endTime -
                         startTime) + " milliseconds");
                 startTime = System.currentTimeMillis();
                 playboyS1.print();
                 endTime = System.currentTimeMillis();
                 System.out.println("Printing again the section 1 took " + (endTime -
+                        startTime) + " milliseconds");
+                startTime = System.currentTimeMillis();
+                playboyS1.print();
+                playboyS2.print();
+                endTime = System.currentTimeMillis();
+                System.out.println("Printing of the section 1 and 2 after loading took " + (endTime -
                         startTime) + " milliseconds");
         }
 }
