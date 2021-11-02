@@ -34,30 +34,32 @@ public class MAIN {
                 playboyS1.add(img1);
                 Section playboyS2 = new Section("Summer Girls");
                 playboyS2.add(img2);
-                playboyS2.add(img3);
+//                playboyS2.add(img3);
                 Book playboy = new Book("Playboy");
 
                 playboy.add(playboyS1);
                 playboy.add(playboyS2);
-                long endTime = System.currentTimeMillis();
-                System.out.println("Creation of the content took " + (endTime -
-                        startTime) + " milliseconds");
-                startTime = System.currentTimeMillis();
-                playboyS1.print();
-                playboyS2.print();
-                endTime = System.currentTimeMillis();
-                System.out.println("Printing of the section 1 and 2 took " + (endTime -
-                        startTime) + " milliseconds");
-                startTime = System.currentTimeMillis();
-                playboyS1.print();
-                endTime = System.currentTimeMillis();
-                System.out.println("Printing again the section 1 took " + (endTime -
-                        startTime) + " milliseconds");
-                startTime = System.currentTimeMillis();
-                playboyS1.print();
-                playboyS2.print();
-                endTime = System.currentTimeMillis();
-                System.out.println("Printing of the section 1 and 2 after loading took " + (endTime -
-                        startTime) + " milliseconds");
+                playboy.print();
+
+//                long endTime = System.currentTimeMillis();
+//                System.out.println("Creation of the content took " + (endTime -
+//                        startTime) + " milliseconds");
+//                startTime = System.currentTimeMillis();
+//                playboyS1.print();
+//                playboyS2.print();
+//                endTime = System.currentTimeMillis();
+//                System.out.println("Printing of the section 1 and 2 took " + (endTime -
+//                        startTime) + " milliseconds");
+//                startTime = System.currentTimeMillis();
+//                playboyS1.print();
+//                endTime = System.currentTimeMillis();
+//                System.out.println("Printing again the section 1 took " + (endTime -
+//                        startTime) + " milliseconds");
+//                startTime = System.currentTimeMillis();
+//                playboyS1.print();
+//                playboyS2.print();
+//                endTime = System.currentTimeMillis();
+//                System.out.println("Printing of the section 1 and 2 after loading took " + (endTime -
+//                        startTime) + " milliseconds");
         }
 }
