@@ -1,6 +1,6 @@
 package ro.uvt.sabloane;
 
-public class Dimension {
+public class Dimension extends java.awt.Dimension {
     Integer x,y;
 
     public Dimension(Integer a, Integer b){
