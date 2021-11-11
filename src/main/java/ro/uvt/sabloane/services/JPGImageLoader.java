@@ -1,11 +1,13 @@
-package ro.uvt.sabloane;
+package ro.uvt.sabloane.services;
+
+import ro.uvt.sabloane.models.ImageContent;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class JPGImageLoader implements ImageLoader{
+public class JPGImageLoader implements ImageLoader {
     public ImageContent load(String url){
         BufferedImage image = null;
         try {

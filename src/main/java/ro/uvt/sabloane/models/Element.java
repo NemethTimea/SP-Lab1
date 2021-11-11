@@ -1,7 +1,6 @@
-package ro.uvt.sabloane;
+package ro.uvt.sabloane.models;
 
 public interface Element {
-    public void print();
     default void add(Element element){
         throw new UnsupportedOperationException("Don't add.");
     };

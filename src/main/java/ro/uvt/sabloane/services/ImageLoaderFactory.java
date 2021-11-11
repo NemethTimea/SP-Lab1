@@ -1,4 +1,4 @@
-package ro.uvt.sabloane;
+package ro.uvt.sabloane.services;
 
 public class ImageLoaderFactory {
     public static ImageLoader create(String imagePath){
