@@ -1,5 +1,8 @@
 package ro.uvt.sabloane.models;
 
+import org.json.JSONObject;
+import ro.uvt.sabloane.services.BookSaveVisitor;
+
 public class Table implements Element, Visitee{
     private String name;
 
@@ -13,5 +16,8 @@ public class Table implements Element, Visitee{
 
     public void accept(Visitor visitor){
         visitor.visitTable(this);
+    }
+    public JSONObject accept(BookSaveVisitor visitor){
+        return visitor.visitTable(this);
     }
 }

@@ -1,7 +1,9 @@
 package ro.uvt.sabloane.models;
 
+import org.json.JSONObject;
 import ro.uvt.sabloane.services.AlignLeft;
 import ro.uvt.sabloane.services.AlignStrategy;
+import ro.uvt.sabloane.services.BookSaveVisitor;
 import ro.uvt.sabloane.services.Context;
 
 public class Paragraph implements Element,Visitee{
@@ -37,8 +39,12 @@ public class Paragraph implements Element,Visitee{
     public void setText(String newtext){
         this.text = newtext;
     }
-
+    @Override
     public void accept(Visitor visitor){
         visitor.visitParagraph(this);
+    }
+    @Override
+    public JSONObject accept(BookSaveVisitor visitor){
+        return visitor.visitParagraph(this);
     }
 }

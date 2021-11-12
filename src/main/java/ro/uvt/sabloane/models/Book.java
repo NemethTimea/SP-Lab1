@@ -1,5 +1,8 @@
 package ro.uvt.sabloane.models;
 
+import org.json.JSONObject;
+import ro.uvt.sabloane.services.BookSaveVisitor;
+
 import java.util.*;
 
 public class Book extends Section implements Visitee{
@@ -18,10 +21,6 @@ public class Book extends Section implements Visitee{
         autori.remove(autor);
     }
 
-    public String getTitle(){
-        return title;
-    }
-
     public Collection<Author> getAuthors(){
         return Collections.unmodifiableCollection(autori);
     }
@@ -30,7 +29,12 @@ public class Book extends Section implements Visitee{
         elements.add(playboyS1);
     }
 
+    @Override
     public void accept(Visitor visitor){
         visitor.visitBook(this);
+    }
+    @Override
+    public JSONObject accept(BookSaveVisitor visitor){
+        return visitor.visitBook(this);
     }
 }

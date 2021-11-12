@@ -1,12 +1,12 @@
 package ro.uvt.sabloane.models;
 
-public interface Visitor {
-    void visitBook(Book book);
-    void visitAuthor(Author author);
-    void visitSection(Section section);
-    void visitTableOfContents(TableOfContents tableofcontents);
-    void visitParagraph(Paragraph paragraph);
-    void visitImageProxy(ImageProxy imageproxy);
-    void visitImage(Image image);
-    void visitTable(Table chapter);
+public interface Visitor<T> {
+    T visitBook(Book book);
+    T visitAuthor(Author author);
+    T visitSection(Section section);
+    T visitTableOfContents(TableOfContents tableofcontents);
+    T visitParagraph(Paragraph paragraph);
+    T visitImageProxy(ImageProxy imageproxy);
+    T visitImage(Image image);
+    T visitTable(Table chapter);
 }

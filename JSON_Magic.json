@@ -1,0 +1,33 @@
+{
+    "Authors": [
+        {"Author": {
+            "Surname": "Ionica",
+            "Name": "Stoian"
+        }},
+        {"Author": {
+            "Surname": "Daniel",
+            "Name": "Mircea"
+        }},
+        {"Author": {
+            "Surname": "Barbu",
+            "Name": "Ion"
+        }},
+        {"Author": {
+            "Surname": "Dumitru",
+            "Name": "Andreea"
+        }}
+    ],
+    "Title": "Titlul povestii deschise",
+    "Elements": [
+        {"Table_Name": "Tabloul miracol"},
+        {"ImageProxyURL:": "acel/url/lung/care/face_minuni.img"},
+        {"Paragraph:": "Paragraph 1"},
+        {"Paragraph:": "Paragraph 2"},
+        {"Paragraph:": "Paragraph 3"},
+        {"Paragraph:": "Paragraph 4"},
+        {"ImageProxyURL:": "C:/Users/Nemeth Timea Sarah/Downloads/bmp.bmp"},
+        {"ImageProxyURL": "C:/Users/Nemeth Timea Sarah/Downloads/valami2.jpg"},
+        {"Paragraph:": "Some text"},
+        {"Table_Name": "Table 1"}
+    ]
+}

@@ -1,5 +1,8 @@
 package ro.uvt.sabloane.models;
 
+import org.json.JSONObject;
+import ro.uvt.sabloane.services.BookSaveVisitor;
+
 public class Author implements Visitee{
 
     private final String name;
@@ -17,8 +20,12 @@ public class Author implements Visitee{
     public String getSurname(){
         return surname;
     }
-
+    @Override
     public void accept(Visitor visitor){
         visitor.visitAuthor(this);
+    }
+    @Override
+    public JSONObject accept(BookSaveVisitor visitor){
+        return visitor.visitAuthor(this);
     }
 }
