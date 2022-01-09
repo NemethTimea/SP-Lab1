@@ -6,19 +6,15 @@ import ro.uvt.sabloane.services.BookSaveVisitor;
 import java.util.*;
 
 public class Book extends Section implements Visitee{
-//    private final String title;
+
     private final Collection<Author> autori = new LinkedList<>();
 
     public Book(String title){
         super(title);
     }
 
-    public void addAuthor(Author autor){
-        autori.add(autor);
-    }
-
-    public void removeAuthor(Author autor){
-        autori.remove(autor);
+    public void addAuthor(Author aAutor){
+        autori.add(aAutor);
     }
 
     public Collection<Author> getAuthors(){

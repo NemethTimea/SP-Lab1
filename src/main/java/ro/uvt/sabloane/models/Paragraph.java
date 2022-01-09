@@ -16,14 +16,6 @@ public class Paragraph implements Element,Visitee{
         this.text = paragraph;
     }
 
-    public void setAlignStrategy(AlignStrategy alignStrategy){
-        this.alignStrategy = alignStrategy;
-    }
-
-    public void setContext(Context context){
-        this.context = context;
-    }
-
     public AlignStrategy getAlignStrategy(){
         return alignStrategy;
     }
@@ -36,9 +28,6 @@ public class Paragraph implements Element,Visitee{
         return text;
     }
 
-    public void setText(String newtext){
-        this.text = newtext;
-    }
     @Override
     public void accept(Visitor visitor){
         visitor.visitParagraph(this);
