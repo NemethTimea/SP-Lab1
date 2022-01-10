@@ -3,10 +3,14 @@ package ro.uvt.sabloane.models;
 import org.json.JSONObject;
 import ro.uvt.sabloane.services.BookSaveVisitor;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import java.util.*;
 
+@Entity
 public class Book extends Section implements Visitee{
 
+    @ManyToMany
     private final Collection<Author> autori = new LinkedList<>();
 
     public Book(String title){

@@ -1,20 +1,32 @@
 package ro.uvt.sabloane.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.json.JSONObject;
 import ro.uvt.sabloane.services.AlignLeft;
 import ro.uvt.sabloane.services.AlignStrategy;
 import ro.uvt.sabloane.services.BookSaveVisitor;
 import ro.uvt.sabloane.services.Context;
 
-public class Paragraph implements Element,Visitee{
-    private String text;
-    private Context context = new Context(16);;
+import javax.persistence.*;
 
+@Entity
+public class Paragraph implements Element,Visitee{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String text;
+
+    @Transient
+    @JsonIgnore
+    private Context context = new Context(16);;
+    @Transient
+    @JsonIgnore
     private AlignStrategy alignStrategy = new AlignLeft();
 
     public Paragraph(String paragraph){
         this.text = paragraph;
     }
+    public Paragraph(){}
 
     public AlignStrategy getAlignStrategy(){
         return alignStrategy;

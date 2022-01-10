@@ -3,9 +3,17 @@ package ro.uvt.sabloane.models;
 import org.json.JSONObject;
 import ro.uvt.sabloane.services.BookSaveVisitor;
 
+import javax.persistence.*;
+
+@Entity
 public class ImageProxy implements Element,Picture,Visitee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String url;
     private Dimension dim;
+
+    @Transient
     private Image realImage = null;
 
     public Image loadImage() {

@@ -3,7 +3,9 @@ package ro.uvt.sabloane;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import ro.uvt.sabloane.services.*;
+import ro.uvt.sabloane.services.ClientComponent;
+import ro.uvt.sabloane.services.SingletonComponent;
+import ro.uvt.sabloane.services.TransientComponent;
 
 @SpringBootApplication
 public class MAIN {

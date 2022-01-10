@@ -3,7 +3,10 @@ package ro.uvt.sabloane.models;
 import org.json.JSONObject;
 import ro.uvt.sabloane.services.BookSaveVisitor;
 
-public class Table implements Element, Visitee{
+import javax.persistence.Entity;
+
+@Entity(name = "Tabel")
+public class Table extends BaseElement implements Element, Visitee{
     private String name;
 
     public Table(String name){
