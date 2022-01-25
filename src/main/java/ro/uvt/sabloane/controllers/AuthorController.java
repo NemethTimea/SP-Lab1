@@ -31,6 +31,7 @@ public class AuthorController {
     @PostMapping("/addNewAuthor")
     public ResponseEntity<Author> addAuthor(@RequestBody Author author) {
         Author author1 = null;
+
         try {
             author1 = authorRepository.save(author);
         } catch (Exception ex) {
@@ -44,10 +45,10 @@ public class AuthorController {
         Optional<Author> author = authorRepository.findById(id);
         return author.map(a ->
                 new ResponseEntity(a, HttpStatus.OK) ).orElse(new ResponseEntity(HttpStatus.NOT_FOUND));
-        // return new ResponseEntity<>(author, HttpStatus.OK);
     }
+
     @GetMapping("/error")
     public String error(){
-        return "Error from AuthorController!";
+        return "Error from Section-Controller!";
     }
 }

@@ -11,10 +11,14 @@ public class ImageProxy implements Element,Picture,Visitee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String url;
-    private Dimension dim;
 
     @Transient
     private Image realImage = null;
+
+    public ImageProxy(int id, String url) {
+        this.id = id;
+        this.url = url;
+    }
 
     public Image loadImage() {
         if (realImage == null) {
@@ -22,12 +26,16 @@ public class ImageProxy implements Element,Picture,Visitee {
         }
         return realImage;
     }
+    public int getID(){ return this.id; }
+
     public String getUrl(){
         return this.url;
     }
+
+    public void setUrl(String newUrl){ this.url = newUrl; }
+
     public ImageProxy(String url) {
         this.url = url;
-        this.dim = new Dimension(10, 10);
     }
     @Override
     public void accept(Visitor visitor){

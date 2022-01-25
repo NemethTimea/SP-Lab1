@@ -24,10 +24,19 @@ public class Section implements Element,Visitee{
     public List<Element> getElements(){
         return elements;
     }
+
     public String getTitle(){
         return title;
     }
 
+    public int getId(){ return this.id; }
+
+    public void setElements(List<Element> element_list){
+        this.elements = element_list;
+    }
+    public void setTitle(String newTitle){
+        this.title = newTitle;
+    }
     @Override
     public void add(Element element) {
         elements.add(element);
@@ -52,4 +61,5 @@ public class Section implements Element,Visitee{
     public JSONObject accept(BookSaveVisitor visitor){
         return visitor.visitSection(this);
     }
+
 }

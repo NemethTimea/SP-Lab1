@@ -4,22 +4,31 @@ import org.json.JSONObject;
 import ro.uvt.sabloane.services.BookSaveVisitor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class TableOfContents extends BaseElement implements Visitee{
-    private final String tbc_name;
 
-    public TableOfContents(String tbc_name) {
-        this.tbc_name = tbc_name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private final String name;
+
+    public TableOfContents(String newName) {
+        this.name = newName;
     }
     public TableOfContents(TableOfContents tableOfContents)
     {
-        tbc_name = tableOfContents.tbc_name;
+        name = tableOfContents.name;
     }
     public TableOfContents() {
         this("");
     }
-    public String getTitle() { return tbc_name; }
+
+    public String getTitle() { return name; }
+
     @Override
     public void accept(Visitor visitor){
     visitor.visitTableOfContents(this);

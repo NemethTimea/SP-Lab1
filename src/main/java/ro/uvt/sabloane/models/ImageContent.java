@@ -1,8 +1,5 @@
 package ro.uvt.sabloane.models;
 
-import ro.uvt.sabloane.models.Dimension;
-
-import javax.swing.*;
 import java.awt.image.BufferedImage;
 
 public class ImageContent {

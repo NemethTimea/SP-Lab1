@@ -15,7 +15,7 @@ public class Author implements Visitee{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private final String name;
+    private String name;
 
     private String surname;
 
@@ -24,6 +24,7 @@ public class Author implements Visitee{
         this.name = name;
         this.surname = surname;
         this.id = id;
+
     }
 
     public Author(String name){
@@ -32,6 +33,17 @@ public class Author implements Visitee{
 
     public String getName(){
         return name;
+    }
+
+    public void setName(String newName){
+        this.name = newName;
+    }
+
+    public void setSurname( String newSurname){
+        this.surname = newSurname;
+    }
+    public int getId(){
+        return this.id;
     }
 
     public String getSurname(){

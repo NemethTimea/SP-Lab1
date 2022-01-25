@@ -18,10 +18,15 @@ public class Paragraph implements Element,Visitee{
 
     @Transient
     @JsonIgnore
-    private Context context = new Context(16);;
+    private Context context = new Context(16);
     @Transient
     @JsonIgnore
     private AlignStrategy alignStrategy = new AlignLeft();
+
+    public Paragraph(int id, String text) {
+        this.id = id;
+        this.text = text;
+    }
 
     public Paragraph(String paragraph){
         this.text = paragraph;
@@ -39,6 +44,10 @@ public class Paragraph implements Element,Visitee{
     public String getText(){
         return text;
     }
+
+    public int getId(){ return this.id; }
+
+    public void setText(String newText) { this.text = newText; }
 
     @Override
     public void accept(Visitor visitor){
