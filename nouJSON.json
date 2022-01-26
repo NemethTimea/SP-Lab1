@@ -1,0 +1,16 @@
+{
+    "Authors": [{"Name": "Ioan Barbu"}],
+    "Title": "Capitolul 21",
+    "Elements": [
+        {"TOC": "Cuprinsul Mare"},
+        {"Paragraph": "Paragraph 10"},
+        {"Paragraph": "Paragraph 20"},
+        {"Paragraph": "Paragraph 30"},
+        {"Paragraph": "Paragraph 40"},
+        {"ImageProxyURL": "C:/url/mare/lung/ceva1.jpg"},
+        {"Image": "C:/bingo/super/lung/ceva2.png"},
+        {"Table_Name": "Tabloul miracol"},
+        {"Paragraph": "Inca un text ar veni aici."},
+        {"Image": "C:/path/url/bumm.jpg"}
+    ]
+}
